@@ -1,0 +1,26 @@
+{
+  "name": "@dpack/logger",
+  "version": "0.1.1",
+  "description": "Official Logger Library For dPack CLI-based Applications",
+  "contributors": [
+    "Jared Rice Sr. <jared@dwebs.io>",
+    "Distributed Webs Project, LLC. <labs@distributedwebs.org>"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "dependencies": {
+    "clientful": "distributedweb/clientful#master",
+    "lodash.throttle": "^4.1.1",
+    "nanobus": "^4.3.3"
+  },
+  "devDependencies": {
+    "prompt": "^1.0.0",
+    "standard": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
