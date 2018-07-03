@@ -1,6 +1,6 @@
 {
   "name": "@dpack/logger",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Official Logger Library For dPack CLI-based Applications",
   "contributors": [
     "Jared Rice Sr. <jared@dwebs.io>",
