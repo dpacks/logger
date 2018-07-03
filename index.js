@@ -15,7 +15,7 @@ function dpackLogger (views, dLogOpts) {
   var clientful = Diffy(dLogOpts)
   var bus = nanobus()
 
-  var dpackEntry = require('@dwcore/clientful/entry')(dLogOpts)
+  var dpackEntry = require('diffy/input')(dLogOpts)
 
   bus.on('render', throttle(render, dlogpace))
   bus.render = render
