@@ -12,7 +12,7 @@ function dpackLogger (views, dLogOpts) {
 
   var dlogpace = dLogOpts.dlogpace || 250
   var dlogstatus = dLogOpts.dlogstatus || {}
-  var clientful = Diffy(dLogOpts)
+  var diff = Diffy(dLogOpts)
   var bus = nanobus()
 
   var dpackEntry = require('diffy/input')(dLogOpts)
@@ -21,7 +21,7 @@ function dpackLogger (views, dLogOpts) {
   bus.render = render
   bus.clear = clear
 
-  clientful.on('resize', render)
+  diff.on('resize', render)
   dpackEntry.on('ctrl-c', function () {
     render()
     if (bus.listeners('exit').length === 0) return process.exit()
@@ -39,13 +39,13 @@ function dpackLogger (views, dLogOpts) {
   }
 
   function clear () {
-    clientful.render(function () { return '' })
+    diff.render(function () { return '' })
     process.nextTick(render)
   }
 
   function render () {
     if (dLogOpts.quiet) return
-    clientful.render(function () {
+    diff.render(function () {
       if (views.length === 1) return views[0](dlogstatus)
       return views.map(function (view) {
         return view(dlogstatus)
