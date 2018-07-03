@@ -54,20 +54,3 @@ function dPackLogger (views, opts) {
     })
   }
 }
-
-
-  function clear () {
-    diff.render(function () { return '' })
-    process.nextTick(render)
-  }
-
-  function render () {
-    if (dLogOpts.quiet) return
-    diff.render(function () {
-      if (views.length === 1) return views[0](dlogstatus)
-      return views.map(function (view) {
-        return view(dlogstatus)
-      }).join('\n')
-    })
-  }
-}
