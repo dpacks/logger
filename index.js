@@ -1,5 +1,5 @@
-var Clientful = require('@dwcore/clientful')
-var cut = require('@dwcore/clientful/cut')
+var Diffy = require('diffy')
+var trim = require('diffy/trim')
 var nanobus = require('nanobus')
 var throttle = require('lodash.throttle')
 
@@ -12,7 +12,7 @@ function dpackLogger (views, dLogOpts) {
 
   var dlogpace = dLogOpts.dlogpace || 250
   var dlogstatus = dLogOpts.dlogstatus || {}
-  var clientful = Clientful(dLogOpts)
+  var clientful = Diffy(dLogOpts)
   var bus = nanobus()
 
   var dpackEntry = require('@dwcore/clientful/entry')(dLogOpts)
@@ -30,7 +30,7 @@ function dpackLogger (views, dLogOpts) {
 
   return {
     dpackEntry: dpackEntry,
-    cut: cut,
+    trim: trim,
     render: render,
     clear: clear,
     use: function (cb) {

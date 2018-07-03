@@ -1,1 +1,1 @@
-module.exports = require('@dwcore/clientful/cut')
+module.exports = require('diffy/trim')

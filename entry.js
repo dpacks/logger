@@ -1,1 +1,1 @@
-module.exports = require('@dwcore/clientful/entry')
+module.exports = require('diffy/input')
