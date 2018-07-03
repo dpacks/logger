@@ -1,6 +1,6 @@
 {
   "name": "@dpack/logger",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Official Logger Library For dPack CLI-based Applications",
   "contributors": [
     "Jared Rice Sr. <jared@dwebs.io>",
@@ -12,7 +12,7 @@
     "test": "standard"
   },
   "dependencies": {
-    "clientful": "distributedweb/clientful#master",
+    "@dwcore/clientful": "dwcore/clientful#master",
     "lodash.throttle": "^4.1.1",
     "nanobus": "^4.3.3"
   },
