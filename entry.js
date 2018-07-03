@@ -1,1 +1,1 @@
-module.exports = require('clientful/entry')
+module.exports = require('@dwcore/clientful/entry')

@@ -1,1 +1,1 @@
-module.exports = require('clientful/cut')
+module.exports = require('@dwcore/clientful/cut')

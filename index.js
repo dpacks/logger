@@ -1,5 +1,5 @@
-var Clientful = require('clientful')
-var cut = require('clientful/cut')
+var Clientful = require('@dwcore/clientful')
+var cut = require('@dwcore/clientful/cut')
 var nanobus = require('nanobus')
 var throttle = require('lodash.throttle')
 
@@ -15,7 +15,7 @@ function dpackLogger (views, dLogOpts) {
   var clientful = Clientful(dLogOpts)
   var bus = nanobus()
 
-  var dpackEntry = require('clientful/entry')(dLogOpts)
+  var dpackEntry = require('@dwcore/clientful/entry')(dLogOpts)
 
   bus.on('render', throttle(render, dlogpace))
   bus.render = render
